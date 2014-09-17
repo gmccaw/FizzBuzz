@@ -1,0 +1,51 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace FizzBuzz
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Initializing string and int variables
+            string string1 = "Fizz";
+            string string2 = "Buzz";
+            int num1 = 3;
+            int num2 = 7;
+
+            //Loop through all numbers between 1 - 100
+            for (int i = 1; i <= 100; i++)
+            {
+                //If evenly divisible by num1 and num2 prints string1 and string2
+                if (i % num1 == 0 && i % num2 == 0)
+                {
+                    Console.WriteLine(string1 + string2);
+                }
+                //If evenly divisible by num1 prints string1
+                else if (i % num1 == 0)
+                {
+                    Console.WriteLine(string1);
+                }
+                //If evenly divisible by num2 prints string2
+                else if (i % num2 == 0)
+                {
+                    Console.WriteLine(string2);
+                }
+                //Prints the value of all numbers where the above conditions are false
+                else
+                {
+                    Console.WriteLine(i);    
+                }
+
+            }
+
+
+
+            Console.ReadLine();
+        }
+
+    }
+}
